@@ -6,4 +6,4 @@ _In questo modulo vedremo come utilizzare l’approccio classico di Xamarin per 
 ####Twitter: @francedot | Email: francesco.bonacci@studentpartner.com
 [Serie su Channel9](https://channel9.msdn.com/Series/Xamarin-per-principianti/)
 
-<img src="/M2.png" width="800">
+<img src="./M2.png" width="800">
