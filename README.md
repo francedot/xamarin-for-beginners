@@ -1,9 +1,11 @@
 # Xamarin for Beginners
 
 _In questa serie dedicata a Xamarin imparerai, partendo dalle basi, come sviluppare la tua applicazione cross-platform._
-
 ####Speaker: Francesco Bonacci, MSP Tech
 ####Twitter: @francedot | Email: francesco.bonacci@studentpartner.com
+[Serie su Channel9](https://channel9.msdn.com/Series/Xamarin-per-principianti/)
+
+<img src="/Logo.png" width="800">
 
 Ogni settimana verrà rilasciato un modulo, che copriranno i seguenti argomenti:
 
@@ -22,5 +24,3 @@ Ogni settimana verrà rilasciato un modulo, che copriranno i seguenti argomenti:
 13. Consumare servizi RESTful con HttpClient
 14. Creare un'app connessa con Azure App Services
 15. Autenticazione e Notifiche Push con Azure
-
-[Serie su Channel9](https://channel9.msdn.com/Series/Xamarin-per-principianti/)
