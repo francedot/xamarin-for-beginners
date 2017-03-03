@@ -1,4 +1,4 @@
-# Xamarin for Beginners
+# Xamarin per Principianti
 
 _In questa serie dedicata a Xamarin imparerai, partendo dalle basi, come sviluppare la tua applicazione cross-platform._
 ####Speaker: Francesco Bonacci, MSP Tech
