@@ -1,0 +1,73 @@
+﻿[
+  {
+    "Title": "Rogue One",
+    "Year": "2016",
+    "Director": "Gareth Edwards",
+    "Country": "USA, UK",
+    "Poster": "https://images-na.ssl-images-amazon.com/images/M/MV5BMjEwMzMxODIzOV5BMl5BanBnXkFtZTgwNzg3OTAzMDI@._V1_SX300.jpg"
+  },
+  {
+    "Title": "Logan",
+    "Year": "2017",
+    "Director": "James Mangold",
+    "Country": "USA",
+    "Poster": "https://images-na.ssl-images-amazon.com/images/M/MV5BMjI1MjkzMjczMV5BMl5BanBnXkFtZTgwNDk4NjYyMTI@._V1_SX300.jpg",
+    "imdbRating": "8.7"
+  },
+  {
+    "Title": "John Wick: Chapter 2",
+    "Year": "2017",
+    "Director": "Chad Stahelski",
+    "Country": "USA",
+    "Poster": "https://images-na.ssl-images-amazon.com/images/M/MV5BMjE2NDkxNTY2M15BMl5BanBnXkFtZTgwMDc2NzE0MTI@._V1_SX300.jpg",
+    "imdbRating": "8.5"
+  },
+  {
+    "Title": "La La Land",
+    "Year": "2016",
+    "Director": "Damien Chazelle",
+    "Country": "USA",
+    "Poster": "https://images-na.ssl-images-amazon.com/images/M/MV5BMzUzNDM2NzM2MV5BMl5BanBnXkFtZTgwNTM3NTg4OTE@._V1_SX300.jpg",
+    "imdbRating": "8.5"
+  },
+  {
+    "Title": "Bleed for This",
+    "Year": "2016",
+    "Director": "Ben Younger",
+    "Country": "USA",
+    "Poster": "https://images-na.ssl-images-amazon.com/images/M/MV5BMjAwNzgyNTUxMF5BMl5BanBnXkFtZTgwNzc0ODc1OTE@._V1_SX300.jpg",
+    "imdbRating": "6.8"
+  },
+  {
+    "Title": "Captain Fantastic",
+    "Year": "2016",
+    "Director": "Matt Ross",
+    "Country": "USA",
+    "Poster": "https://images-na.ssl-images-amazon.com/images/M/MV5BMjE5OTM0OTY5NF5BMl5BanBnXkFtZTgwMDcxOTQ3ODE@._V1_SX300.jpg",
+    "imdbRating": "7.9"
+  },
+  {
+    "Title": "Omicidio all'Italiana",
+    "Year": "2017",
+    "Director": "Marcello Macchia",
+    "Country": "Italy",
+    "Poster": "https://images-na.ssl-images-amazon.com/images/M/MV5BNDJhN2JhZGYtNTY0My00MzY4LTkwM2MtMjA3OWRiZGJkYzc2XkEyXkFqcGdeQXVyNjY1OTY4MTk@._V1_SX300.jpg",
+    "imdbRating": "6.7"
+  },
+  {
+    "Title": "Moonlight",
+    "Year": "2016",
+    "Director": "Barry Jenkins",
+    "Country": "USA",
+    "Poster": "https://images-na.ssl-images-amazon.com/images/M/MV5BNzQxNTIyODAxMV5BMl5BanBnXkFtZTgwNzQyMDA3OTE@._V1_SX300.jpg",
+    "imdbRating": "8.1"
+  },
+  {
+    "Title": "Manchester by the Sea",
+    "Year": "2016",
+    "Director": "Kenneth Lonergan",
+    "Country": "USA",
+    "Poster": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTYxMjk0NDg4Ml5BMl5BanBnXkFtZTgwODcyNjA5OTE@._V1_SX300.jpg",
+    "imdbRating": "8.1",
+  }
+]
