@@ -24,7 +24,7 @@ namespace Movies
 #elif __ANDROID__
 			return Android.App.Application.Context.Assets.Open(Filename);
 #else // UWP
-			var sf = await Windows.ApplicationModel.Package.Current.InstalledLocation.GetFileAsync(Filename);
+			var sf = await Windows.ApplicationModel.Package.Current.InstalledLocation.GetFileAsync($@"Assets\{Filename}");
 			return await sf.OpenStreamForReadAsync();
 #endif
         }
