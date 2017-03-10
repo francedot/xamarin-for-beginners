@@ -34,8 +34,7 @@ namespace Movies.UWP
         }
 
         public async Task OnNavigatedToAsync()
-        {
-            MoviesLoader.Loader = new StreamLoader();
+        {   
             Movies = await MoviesLoader.LoadMoviesAsync();
         }
     }
