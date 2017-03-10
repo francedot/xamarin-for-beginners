@@ -39,6 +39,7 @@ namespace Movies.UWP
         /// <param name="e">Details about the launch request and process.</param>
         protected override void OnLaunched(LaunchActivatedEventArgs e)
         {
+            MoviesLoader.Loader = new StreamLoader();
 #if DEBUG
             if (System.Diagnostics.Debugger.IsAttached)
             {
