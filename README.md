@@ -14,7 +14,7 @@ Ogni settimana verrà rilasciato un modulo, che copriranno i seguenti argomenti:
 3. Xamarin.Android: Activity ed Intent
 4. Xamarin.iOS: Fondamenti di iOS
 5. Xamarin.iOS: Storyboard e Navigazione
-6. PCL e SP: Due approcci alla condivisione di codice.
+6. PCL e SP: Due approcci alla condivisione di codice
 7. Xamarin.Forms: Introduzione al Framework
 8. Xamarin.Forms: Xaml e Design dell’UI
 9. Xamarin.Forms: Data Binding e MVVM
