@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:TipCalculator"
+             x:Class="TipCalculator.MainPage"
+             BackgroundColor="{StaticResource DarkColor}">
+    <Page.Resources>
+        <ResourceDictionary/>
+    </Page.Resources>
+    <StackLayout>
+        <StackLayout.Spacing>
+            <OnPlatform x:TypeArguments="x:Double" iOS="4.0" Android="4.0" WinPhone="8.0" />
+        </StackLayout.Spacing>
+        <StackLayout.Padding>
+            <OnPlatform x:TypeArguments="Thickness"  iOS="4,28,4,4" Android="2" WinPhone="4" />
+        </StackLayout.Padding>
+        
+        <Entry x:Name="billEntry"
+               TextColor="{StaticResource DarkColor}"
+               Placeholder="Enter Bill"
+               PlaceholderColor="{StaticResource DarkColor}"
+               Keyboard="Numeric"
+               HorizontalTextAlignment="Center"/>
+
+        <Button x:Name="calculateButton"
+                Text="CALCULATE"         
+                HorizontalOptions="Fill"
+                Clicked="CalculateButtonOnClicked"/>
+
+        <StackLayout Orientation="Horizontal">
+            <StackLayout.Resources>
+                <ResourceDictionary>
+                    <Color x:Key="DarkColor">#424242</Color>
+                    <Color x:Key="LightColor">#F5F5F5</Color>
+                </ResourceDictionary>
+            </StackLayout.Resources>
+            <Label Text="Tip"
+                   FontSize="Medium"
+                   TextColor="{StaticResource LightColor}"/>
+            <Label x:Name="tipLabel"
+                   FontSize="Medium"
+                   TextColor="{StaticResource LightColor}"/>
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal">
+            <StackLayout.Resources>
+                <ResourceDictionary>
+                    <Color x:Key="DarkColor">#616161</Color>
+                    <Color x:Key="LightColor">#E0E0E0</Color>
+                </ResourceDictionary>
+            </StackLayout.Resources>
+            <Label Text="Total"
+                   FontSize="Medium"
+                   TextColor="{StaticResource LightColor}"/>
+            <Label x:Name="totalLabel"
+                   FontSize="Medium"
+                   TextColor="{StaticResource LightColor}"/>
+        </StackLayout>
+        
+    </StackLayout>
+</ContentPage>
