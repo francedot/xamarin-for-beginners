@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:abstractions="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin.Abstractions"
+             x:Class="Profile.MainPage"
+             BackgroundColor="White"
+             BindingContext="{Binding Source={StaticResource myProfile}}">
+
+    <StackLayout Spacing="0">
+        
+        <Grid>
+            <!-- Background Image -->
+            <Image HeightRequest="340"
+                   Aspect="AspectFill"
+                   Source="{Binding BackgroundImage}" />
+            <Image Margin="-4"
+                   Aspect="Fill"
+                   VerticalOptions="End"
+                   Source="Assets/CurvedMask.png"/>
+
+            <!-- Profile Image -->
+            <abstractions:CircleImage BorderColor="White"
+                                      BorderThickness="3"
+                                      Source="{Binding ProfileImage}"
+                                      HeightRequest="100"
+                                      HorizontalOptions="Center"
+                                      TranslationY="50"
+                                      VerticalOptions="End"
+                                      WidthRequest="100"/>
+        </Grid>
+       
+        <!-- Profile Name -->
+        <StackLayout Padding="0,50,0,00"
+                     HorizontalOptions="Center">
+            <Label HorizontalTextAlignment="Center"
+                   Style="{StaticResource ProfileNameLabel}"
+                   Text="{Binding Name}" />
+            <Label Margin="0,-5"
+                   HorizontalTextAlignment="Center"
+                   Style="{StaticResource ProfileTagLabel}"
+                   Text="{Binding Tag}" />
+        </StackLayout>
+
+        <!-- Social Stats -->
+        <Grid Margin="0,30"
+              ColumnSpacing="0"
+              RowSpacing="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <StackLayout>
+                <Label Style="{StaticResource StatsNumberLabel}"
+                       Text="{Binding Likes}" />
+                <Label Style="{StaticResource StatsCaptionLabel}"
+                       Text="Likes" />
+            </StackLayout>
+
+            <StackLayout Grid.Column="1">
+                <Label Style="{StaticResource StatsNumberLabel}"
+                       Text="{Binding Following}" />
+                <Label Style="{StaticResource StatsCaptionLabel}"
+                       Text="Following" />
+            </StackLayout>
+
+            <StackLayout Grid.Column="2">
+                <Label Style="{StaticResource StatsNumberLabel}"
+                       Text="{Binding Followers}" />
+                <Label Style="{StaticResource StatsCaptionLabel}"
+                       Text="Followers" />
+            </StackLayout>
+        </Grid>
+
+        <!-- Profile Description -->
+        <Label Margin="20,0"
+               HorizontalTextAlignment="Center"
+               Style="{StaticResource MainBodyLabel}"
+               Text="{Binding Description}" />
+
+    </StackLayout>
+
+</ContentPage>
