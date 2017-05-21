@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            x:Class="Movies.Views.MoviePage"
+            Title="Movie">
+    <TabbedPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Label">
+                <Setter Property="FontSize" Value="20"/>
+            </Style>
+        </ResourceDictionary>
+    </TabbedPage.Resources>
+    
+    <TabbedPage.Children>
+
+        <ContentPage Title="Info">
+            <ScrollView>
+                <StackLayout Spacing="0">
+                    <Image Aspect="AspectFill"
+                           Source="{Binding Movie.Poster}" />
+                    <StackLayout Padding="20,8,20,16">
+                        <Label FontAttributes="None"
+                               FontSize="35"
+                               LineBreakMode="WordWrap"
+                               Text="{Binding Movie.Title}"/>
+                        <StackLayout Orientation="Horizontal" Margin="0,16,0,0">
+                            <Label Text="Genre:"  FontAttributes="Bold"/>
+                            <Label Text="{Binding Movie.Genre}" />
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal" Margin="0,4,0,0">
+                            <Label Text="Country:"  FontAttributes="Bold"/>
+                            <Label Text="{Binding Movie.Country}" />
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal" Margin="0,4,0,0">
+                            <Label Text="Year:"  FontAttributes="Bold"/>
+                            <Label Text="{Binding Movie.Year}" />
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal" Margin="0,4,0,0">
+                            <Label Text="IMDb Rating:"  FontAttributes="Bold"/>
+                            <Label Text="{Binding Movie.Rating, StringFormat='{0:0.0}'}" />
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal" Margin="0,12,0,0">
+                            <Label Text="Directed by" />
+                            <Label Text="{Binding Movie.Director}" FontAttributes="Italic" />
+                        </StackLayout>
+                    </StackLayout>
+                </StackLayout>
+            </ScrollView>
+        </ContentPage>
+
+        <ContentPage Title="Summary">
+            <ScrollView>
+                <Label Margin="20" FontAttributes="Italic" Text="{Binding Movie.Plot}"/>
+            </ScrollView>
+        </ContentPage>
+        
+    </TabbedPage.Children>
+</TabbedPage>
