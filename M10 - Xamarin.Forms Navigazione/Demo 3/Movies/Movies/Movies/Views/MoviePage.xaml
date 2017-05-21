@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            x:Class="Movies.Views.MoviePage"
+            Title="Movie">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Label">
+                <Setter Property="FontSize" Value="20"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ScrollView>
+        <StackLayout Spacing="0">
+            <Image Aspect="AspectFill"
+                           Source="{Binding Poster}" />
+            <StackLayout Padding="20,8,20,16">
+                <Label FontAttributes="None"
+                               FontSize="35"
+                               LineBreakMode="WordWrap"
+                               Text="{Binding Title}"/>
+                <StackLayout Orientation="Horizontal" Margin="0,16,0,0">
+                    <Label Text="Genre:"  FontAttributes="Bold"/>
+                    <Label Text="{Binding Genre}" />
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" Margin="0,4,0,0">
+                    <Label Text="Country:"  FontAttributes="Bold"/>
+                    <Label Text="{Binding Country}" />
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" Margin="0,4,0,0">
+                    <Label Text="Year:"  FontAttributes="Bold"/>
+                    <Label Text="{Binding Year}" />
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" Margin="0,4,0,0">
+                    <Label Text="IMDb Rating:"  FontAttributes="Bold"/>
+                    <Label Text="{Binding Rating, StringFormat='{0:0.0}'}" />
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" Margin="0,12,0,0">
+                    <Label Text="Directed by" />
+                    <Label Text="{Binding Director}" FontAttributes="Italic" />
+                </StackLayout>
+
+            </StackLayout>
+
+            <StackLayout BackgroundColor="#E0E0E0" Padding="20,16,20,16" VerticalOptions="FillAndExpand">
+                <Label FontAttributes="Italic" Text="{Binding Plot}" />
+            </StackLayout>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
