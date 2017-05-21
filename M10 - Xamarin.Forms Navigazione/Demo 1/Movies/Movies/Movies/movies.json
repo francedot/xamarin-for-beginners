@@ -1,0 +1,254 @@
+﻿[
+  {
+    "Title": "Rogue One",
+    "Year": "2016",
+    "Director": "Gareth Edwards",
+    "Country": "USA, UK",
+    "Poster": "https://images-na.ssl-images-amazon.com/images/M/MV5BMjEwMzMxODIzOV5BMl5BanBnXkFtZTgwNzg3OTAzMDI@._V1_SX300.jpg",
+    "Rating": "8.1",
+    "Genre": "Action, Adventure, Sci-Fi"
+  },
+  {
+    "Title": "Logan",
+    "Year": "2017",
+    "Director": "James Mangold",
+    "Country": "USA",
+    "Poster": "https://images-na.ssl-images-amazon.com/images/M/MV5BMjI1MjkzMjczMV5BMl5BanBnXkFtZTgwNDk4NjYyMTI@._V1_SX300.jpg",
+    "Rating": "8.7",
+    "Genre": "Action, Drama, Sci-Fi"
+  },
+  {
+    "Title": "John Wick: Chapter 2",
+    "Year": "2017",
+    "Director": "Chad Stahelski",
+    "Country": "USA",
+    "Poster": "https://images-na.ssl-images-amazon.com/images/M/MV5BMjE2NDkxNTY2M15BMl5BanBnXkFtZTgwMDc2NzE0MTI@._V1_SX300.jpg",
+    "Rating": "8.5",
+    "Genre": "Action, Crime, Thriller"
+  },
+  {
+    "Title": "La La Land",
+    "Year": "2016",
+    "Director": "Damien Chazelle",
+    "Country": "USA",
+    "Poster": "https://images-na.ssl-images-amazon.com/images/M/MV5BMzUzNDM2NzM2MV5BMl5BanBnXkFtZTgwNTM3NTg4OTE@._V1_SX300.jpg",
+    "Rating": "8.5",
+    "Genre": "Comedy, Drama, Music"
+  },
+  {
+    "Title": "Bleed for This",
+    "Year": "2016",
+    "Director": "Ben Younger",
+    "Country": "USA",
+    "Poster": "https://images-na.ssl-images-amazon.com/images/M/MV5BMjAwNzgyNTUxMF5BMl5BanBnXkFtZTgwNzc0ODc1OTE@._V1_SX300.jpg",
+    "Rating": "6.8",
+    "Genre": "Biography, Drama, Sport"
+  },
+  {
+    "Title": "Captain Fantastic",
+    "Year": "2016",
+    "Director": "Matt Ross",
+    "Country": "USA",
+    "Poster": "https://images-na.ssl-images-amazon.com/images/M/MV5BMjE5OTM0OTY5NF5BMl5BanBnXkFtZTgwMDcxOTQ3ODE@._V1_SX300.jpg",
+    "Rating": "7.9",
+    "Genre": "Comedy, Drama"
+  },
+  {
+    "Title": "Omicidio all'Italiana",
+    "Year": "2017",
+    "Director": "Marcello Macchia",
+    "Country": "Italy",
+    "Poster": "https://images-na.ssl-images-amazon.com/images/M/MV5BNDJhN2JhZGYtNTY0My00MzY4LTkwM2MtMjA3OWRiZGJkYzc2XkEyXkFqcGdeQXVyNjY1OTY4MTk@._V1_SX300.jpg",
+    "Rating": "6.7",
+    "Genre": "Comedy"
+  },
+  {
+    "Title": "Moonlight",
+    "Year": "2016",
+    "Director": "Barry Jenkins",
+    "Country": "USA",
+    "Poster": "https://images-na.ssl-images-amazon.com/images/M/MV5BNzQxNTIyODAxMV5BMl5BanBnXkFtZTgwNzQyMDA3OTE@._V1_SX300.jpg",
+    "Rating": "8.1",
+    "Genre": "Drama"
+  },
+  {
+    "Title": "Manchester by the Sea",
+    "Year": "2016",
+    "Director": "Kenneth Lonergan",
+    "Country": "USA",
+    "Poster": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTYxMjk0NDg4Ml5BMl5BanBnXkFtZTgwODcyNjA5OTE@._V1_SX300.jpg",
+    "Rating": "8.1",
+    "Genre": "Drama"
+  },
+  {
+    "Title": "Fantastic Beasts and Where to Find Them",
+    "Year": "2016",
+    "Director": "David Yates",
+    "Country": "UK, USA",
+    "Poster": "https://images-na.ssl-images-amazon.com/images/M/MV5BMjMxOTM1OTI4MV5BMl5BanBnXkFtZTgwODE5OTYxMDI@._V1_SX300.jpg",
+    "Rating": "7.6",
+    "Genre": "Adventure, Family, Fantasy"
+  },
+  {
+    "Title": "Passengers",
+    "Year": "2016",
+    "Director": "Morten Tyldum",
+    "Country": "USA",
+    "Poster": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTk4MjU3MDIzOF5BMl5BanBnXkFtZTgwMjM2MzY2MDI@._V1_SX300.jpg",
+    "Rating": "7.0",
+    "Genre": "Adventure, Drama, Romance"
+  },
+  {
+    "Title": "Doctor Strange",
+    "Year": "2016",
+    "Director": "Scott Derrickson",
+    "Country": "USA",
+    "Poster": "https://images-na.ssl-images-amazon.com/images/M/MV5BNTA2NTg0MjM0OV5BMl5BanBnXkFtZTgwNTEyMDExMTI@._V1_SX300.jpg",
+    "Rating": "7.7",
+    "Genre": "Action, Adventure, Fantasy"
+  },
+  {
+    "Title": "Mike and Dave Need Wedding Dates",
+    "Year": "2016",
+    "Director": "Jake Szymanski",
+    "Country": "USA",
+    "Poster": "https://images-na.ssl-images-amazon.com/images/M/MV5BMjM4NDIxNzI5Nl5BMl5BanBnXkFtZTgwMTg4NTY5NzE@._V1_SX300.jpg",
+    "Rating": "6.0",
+    "Genre": "Adventure, Comedy, Romance"
+  },
+  {
+    "Title": "Assassin's Creed",
+    "Year": "2016",
+    "Director": "Justin Kurzel",
+    "Country": "UK, Hong Kong, USA",
+    "Poster": "https://images-na.ssl-images-amazon.com/images/M/MV5BNzE1OTczNTc1OF5BMl5BanBnXkFtZTgwMzgyMDI3MDI@._V1_SX300.jpg",
+    "Rating": "6.4",
+    "Genre": "Action, Adventure, Fantasy"
+  },
+  {
+    "Title": "X-Men: Apocalypse",
+    "Year": "2016",
+    "Director": "Bryan Singer",
+    "Country": "USA",
+    "Poster": "https://images-na.ssl-images-amazon.com/images/M/MV5BMjU1ODM1MzYxN15BMl5BanBnXkFtZTgwOTA4NDE2ODE@._V1_SX300.jpg",
+    "Rating": "7.1",
+    "Genre": "Action, Adventure, Sci-Fi"
+  },
+  {
+    "Title": "Deadpool",
+    "Year": "2016",
+    "Director": "Tim Miller",
+    "Country": "USA",
+    "Poster": "https://images-na.ssl-images-amazon.com/images/M/MV5BMjQyODg5Njc4N15BMl5BanBnXkFtZTgwMzExMjE3NzE@._V1_SX300.jpg",
+    "Rating": "8.1",
+    "Genre": "Action, Adventure, Comedy"
+  },
+  {
+    "Title": "The Legend of Tarzan",
+    "Year": "2016",
+    "Director": "David Yates",
+    "Country": "UK, Canada, USA",
+    "Poster": "https://images-na.ssl-images-amazon.com/images/M/MV5BMzY3OTI0OTcyMF5BMl5BanBnXkFtZTgwNjkxNTAwOTE@._V1_SX300.jpg",
+    "Rating": "6.3",
+    "Genre": "Action, Adventure, Drama"
+  },
+  {
+    "Title": "Underworld: Blood Wars",
+    "Year": "2016",
+    "Director": "Anna Foerster",
+    "Country": "USA",
+    "Poster": "https://images-na.ssl-images-amazon.com/images/M/MV5BMjI5Njk0NTIyNV5BMl5BanBnXkFtZTgwNjU4MjY5MDI@._V1_SX300.jpg",
+    "Rating": "6.4",
+    "Genre": "Action, Horror"
+  },
+  {
+    "Title": "Batman vs Superman: Dawn of Justice",
+    "Year": "2016",
+    "Director": "Zack Snyder",
+    "Country": "USA",
+    "Poster": "https://images-na.ssl-images-amazon.com/images/M/MV5BYThjYzcyYzItNTVjNy00NDk0LTgwMWQtYjMwNmNlNWJhMzMyXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg",
+    "Rating": "6.7",
+    "Genre": "Action, Adventure, Sci-Fi"
+  },
+  {
+    "Title": "10 Cloverfield Lane",
+    "Year": "2016",
+    "Director": "Dan Trachtenberg",
+    "Country": "USA",
+    "Poster": "https://images-na.ssl-images-amazon.com/images/M/MV5BMjEzMjczOTIxMV5BMl5BanBnXkFtZTgwOTUwMjI3NzE@._V1_SX300.jpg",
+    "Rating": "7.3",
+    "Genre": "Drama, Horror, Mystery"
+  },
+  {
+    "Title": "Finding Dory",
+    "Year": "2016",
+    "Director": "Andrew Stanton, Angus MacLane",
+    "Country": "USA",
+    "Poster": "https://images-na.ssl-images-amazon.com/images/M/MV5BNzg4MjM2NDQ4MV5BMl5BanBnXkFtZTgwMzk3MTgyODE@._V1_SX300.jpg",
+    "Rating": "7.5",
+    "Genre": "Animation, Adventure, Comedy"
+  },
+  {
+    "Title": "Star Trek Beyond",
+    "Year": "2016",
+    "Director": "Justin Lin",
+    "Country": "USA, Hong Kong, China",
+    "Poster": "https://images-na.ssl-images-amazon.com/images/M/MV5BODgzN2E1YjctODg5Yi00YzYwLWJjZjAtNDg2MGE2Y2MyYjBmXkEyXkFqcGdeQXVyNjM1MTQ0NTQ@._V1_SX300.jpg",
+    "Rating": "7.1",
+    "Genre": "Action, Adventure, Sci-Fi"
+  },
+  {
+    "Title": "Captain America: Civil War",
+    "Year": "2016",
+    "Director": "Anthony Russo, Joe Russo",
+    "Country": "USA",
+    "Poster": "https://images-na.ssl-images-amazon.com/images/M/MV5BMjQ0MTgyNjAxMV5BMl5BanBnXkFtZTgwNjUzMDkyODE@._V1_SX300.jpg",
+    "Rating": "7.9",
+    "Genre": "Action, Adventure, Sci-Fi"
+  },
+  {
+    "Title": "Don't Hang Up",
+    "Year": "2016",
+    "Director": "Damien Macé, Alexis Wajsbrot",
+    "Country": "UK",
+    "Poster": "https://images-na.ssl-images-amazon.com/images/M/MV5BN2Y3ZmZmNzctODU2MC00OTcxLThlMWYtZDcxNjRkZjg4YmEwL2ltYWdlXkEyXkFqcGdeQXVyMTM2MzgyOTU@._V1_SX300.jpg",
+    "Rating": "7.6",
+    "Genre": "Horror, Thriller"
+  },
+  {
+    "Title": "Ghostbusters",
+    "Year": "2016",
+    "Director": "Paul Feig",
+    "Country": "USA, Australia",
+    "Poster": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTg3OTM4NTM4NV5BMl5BanBnXkFtZTgwOTI3NDc0OTE@._V1_SX300.jpg",
+    "Rating": "5.4",
+    "Genre": "Action, Comedy, Fantasy"
+  },
+  {
+    "Title": "A Monster Calls",
+    "Year": "2016",
+    "Director": "J.A. Bayona",
+    "Country": "USA, Spain",
+    "Poster": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTg1OTA5OTkyNV5BMl5BanBnXkFtZTgwODMwNDU5OTE@._V1_SX300.jpg",
+    "Rating": "7.6",
+    "Genre": "Drama, Fantasy"
+  },
+  {
+    "Title": "Colossal",
+    "Year": "2016",
+    "Director": "Nacho Vigalondo",
+    "Country": "Spain, Canada",
+    "Poster": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTYwNDA2NTI4NV5BMl5BanBnXkFtZTgwNTAxNDY0MTI@._V1_SX300.jpg",
+    "Rating": "6.6",
+    "Genre": "Action, Sci-Fi, Thriller"
+  },
+  {
+    "Title": "Sully",
+    "Year": "2016",
+    "Director": "Clint Eastwood",
+    "Country": "USA",
+    "Poster": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTg5NTUwNDIyOV5BMl5BanBnXkFtZTgwMjI2OTc3OTE@._V1_SX300.jpg",
+    "Rating": "7.5",
+    "Genre": "Biography, Drama"
+  }
+]
