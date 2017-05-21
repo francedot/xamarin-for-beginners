@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+  <color name="material_gray_800">#424242</color>
+  <color name="material_yellow_500">#FFEB3B</color>
+  <color name="material_orange_500">#FF9800</color>
+  <color name="material_blue_500">#2196F3</color>
+  <color name="material_blue_700">#1976D2</color>
+  <!--<color name="accent">#FFC107</color>-->
+  <!--<color name="AccentColor">#FFDA125F</color>-->
+  <color name="AccentColor">#FE4006</color>
+  <color name="InverseTextColor">#FFFFFFFF</color>
+</resources>

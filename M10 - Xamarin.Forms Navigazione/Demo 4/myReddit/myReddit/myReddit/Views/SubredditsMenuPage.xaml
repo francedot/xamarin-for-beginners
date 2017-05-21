@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage x:Class="MyReddit.Views.SubredditsMenuPage"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:behaviors="clr-namespace:MyReddit.Behaviors;assembly=myReddit"
+             xmlns:cells="clr-namespace:MyReddit.Cells;assembly=myReddit"
+             xmlns:controls="clr-namespace:MyReddit.Controls;assembly=myReddit"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             Title="myReddit"
+             prism:ViewModelLocator.AutowireViewModel="False"
+             BackgroundColor="{StaticResource MainMenuBackgroundColor}"
+             Icon="{StaticResource HamburguerIcon}">
+
+    <Grid Padding="0,20,0,0" VerticalOptions="FillAndExpand">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="150" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+
+        <controls:AppLogo Grid.Row="0" />
+
+
+        <ListView x:Name="MenuListView"
+                  Grid.Row="1"
+                  GroupDisplayBinding="{Binding Key}"
+                  IsGroupingEnabled="True"
+                  ItemsSource="{Binding MenuGroupings}"
+                  SelectedItem="{Binding CurrentSubreddit,
+                                         Mode=OneWay}"
+                  SeparatorVisibility="None"
+                  Style="{StaticResource MainMenuListViewStyle}"
+                  VerticalOptions="FillAndExpand">
+            <ListView.Behaviors>
+                <behaviors:EventToCommandBehavior Command="{Binding ChangeSubredditCommand}"
+                                                  Converter="{StaticResource ItemTappedConverter}"
+                                                  EventName="ItemTapped" />
+            </ListView.Behaviors>
+            <ListView.GroupHeaderTemplate>
+                <DataTemplate>
+                    <cells:MainMenuGroupHeaderCell />
+                </DataTemplate>
+            </ListView.GroupHeaderTemplate>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <cells:MainMenuCell />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+    </Grid>
+</ContentPage>

@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ViewCell x:Class="MyReddit.Cells.PostCell"
+          xmlns="http://xamarin.com/schemas/2014/forms"
+          xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+          xmlns:abstractions="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin.Abstractions"
+          xmlns:controls="clr-namespace:MyReddit.Controls;assembly=myReddit"
+          xmlns:helpers="clr-namespace:myReddit.Helpers;assembly=myReddit">
+    <ViewCell.View>
+        
+        <ContentView Padding="10">
+            <!--  Outer container:  -->
+            <Grid RowSpacing="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="1" />
+                </Grid.RowDefinitions>
+
+                <!--  Likes  -->
+                <Grid BackgroundColor="{StaticResource MainMenuBackgroundColor}"
+                      ColumnSpacing="0"
+                      Padding="20"
+                      RowSpacing="0">
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="44" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="44" />
+                        <RowDefinition Height="1" />
+                    </Grid.RowDefinitions>
+
+                    <!--  Card Header  -->
+                    <AbsoluteLayout>
+
+                        <!--  Avatar  -->
+                        <abstractions:CircleImage Aspect="AspectFill"
+                                                  BorderColor="{StaticResource AccentColor}"
+                                                  BorderThickness="2"
+                                                  Source="{StaticResource AvatarPlaceholder}">
+                            <abstractions:CircleImage.WidthRequest>
+                                <helpers:OnPlatform2 x:TypeArguments="x:Double"
+                                                     Android="45"
+                                                     Windows="45"
+                                                     iOS="55" />
+                            </abstractions:CircleImage.WidthRequest>
+                            <abstractions:CircleImage.HeightRequest>
+                                <helpers:OnPlatform2 x:TypeArguments="x:Double"
+                                                     Android="45"
+                                                     Windows="45"
+                                                     iOS="55" />
+                            </abstractions:CircleImage.HeightRequest>
+                        </abstractions:CircleImage>
+
+                        <!--  Author  -->
+                        <Label HeightRequest="40"
+                               Text="{Binding Author}"
+                               TextColor="White"
+                               TranslationY="0"
+                               VerticalTextAlignment="Center">
+                            <Label.TranslationX>
+                                <helpers:OnPlatform2 x:TypeArguments="x:Double"
+                                                     Android="55"
+                                                     Windows="55"
+                                                     iOS="60" />
+                            </Label.TranslationX>
+                        </Label>
+                    </AbsoluteLayout>
+
+                    <!--  Card Body  -->
+                    <StackLayout Grid.Row="1"
+                                 Padding="0,20,0,0"
+                                 Spacing="20">
+
+                        <!--  Card article image  -->
+                        <Image Aspect="AspectFill"
+                               HeightRequest="150"
+                               Source="{Binding ThumbnailUri}"
+                               VerticalOptions="StartAndExpand" />
+
+                        <!--  Card title  -->
+                        <Label HeightRequest="40"
+                               Text="{Binding Title}"
+                               TextColor="White"
+                               VerticalOptions="FillAndExpand" />
+
+                    </StackLayout>
+
+                    <!--  Card Footer  -->
+                    <StackLayout Grid.Row="2"
+                                 Orientation="Horizontal"
+                                 Padding="0,10,0,0"
+                                 Spacing="2"
+                                 VerticalOptions="End">
+
+                        <!--  Article section  -->
+                        <Label FontAttributes="Bold"
+                               FontSize="14"
+                               HorizontalOptions="StartAndExpand"
+                               LineBreakMode="TailTruncation"
+                               Text="{Binding Subreddit}"
+                               TextColor="Gray" />
+
+                        <!--  Article date  -->
+                        <Label FontSize="14"
+                               HorizontalOptions="End"
+                               LineBreakMode="TailTruncation"
+                               Text="{Binding DateDreated,
+                                              Converter={StaticResource DateTimeConverter}}"
+                               TextColor="White"
+                               TranslationX="-14" />
+
+                        <!--  Article followers  -->
+                        <controls:FontAwesomeIcon FontSize="14"
+                                                  HorizontalOptions="End"
+                                                  Text="&#xf164; "
+                                                  TextColor="{StaticResource AccentColor}"
+                                                  TranslationX="-5"
+                                                  TranslationY="2" />
+
+                        <!--  Comments  -->
+                        <Label FontSize="14"
+                               HorizontalOptions="End"
+                               LineBreakMode="TailTruncation"
+                               Text="{Binding CommentsCount}"
+                               TextColor="{StaticResource AccentColor}"
+                               TranslationX="-5" />
+
+                        <!--  Article likes  -->
+                        <controls:FontAwesomeIcon FontSize="14"
+                                                  HorizontalOptions="End"
+                                                  Text="&#xf086; "
+                                                  TextColor="{StaticResource AccentColor}"
+                                                  TranslationY="2" />
+
+                        <Label FontSize="14"
+                               HorizontalOptions="End"
+                               LineBreakMode="TailTruncation"
+                               Text="{Binding Likes}"
+                               TextColor="{StaticResource AccentColor}" />
+                    </StackLayout>
+
+                </Grid>
+
+
+                <!--  CARDS SHADOW  -->
+                <BoxView Grid.Row="1"
+                         BackgroundColor="Gray"
+                         HeightRequest="1"
+                         Opacity=".5" />
+
+            </Grid>
+
+        </ContentView>
+
+    </ViewCell.View>
+</ViewCell>
