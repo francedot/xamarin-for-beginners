@@ -13,27 +13,5 @@ namespace Movies.Views
         {
             InitializeComponent();
         }
-
-        protected override void OnAppearing()
-        {
-            base.OnAppearing();
-            if (ViewModel != null)
-            {
-                ViewModel.GenreChanged += OnGenreChanged;
-            }
-        }
-
-        private void OnGenreChanged(object sender, EventArgs eventArgs)
-        {
-            this.Children.Clear();
-
-            foreach (var movie in ViewModel.Movies)
-            {
-                this.Children.Add(new MoviePage()
-                {
-                    BindingContext = movie
-                });
-            }
-        }
     }
 }

@@ -1,5 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <CarouselPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Movies.Views.DetailPage">
+             xmlns:views="clr-namespace:Movies.Views;assembly=Movies"
+             x:Class="Movies.Views.DetailPage"
+              ItemsSource="{Binding Movies}">
+    <CarouselPage.ItemTemplate>
+        <DataTemplate>
+            <views:MoviePage />
+        </DataTemplate>
+    </CarouselPage.ItemTemplate>
 </CarouselPage>

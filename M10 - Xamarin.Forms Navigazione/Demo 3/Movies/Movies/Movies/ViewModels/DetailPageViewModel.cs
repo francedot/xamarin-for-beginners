@@ -8,8 +8,6 @@ namespace Movies.ViewModels
 {
     public class DetailPageViewModel : ViewModelBase
     {
-        public event EventHandler<EventArgs> GenreChanged; 
-
         private IList<Movie> _movies;
 
         public DetailPageViewModel()
@@ -19,14 +17,7 @@ namespace Movies.ViewModels
         public IList<Movie> Movies
         {
             get => _movies;
-            set
-            {
-                Set(ref _movies, value);
-                if (value != null)
-                {
-                    GenreChanged?.Invoke(this, EventArgs.Empty);
-                }
-            }
+            set => Set(ref _movies, value);
         }
     }
 }
