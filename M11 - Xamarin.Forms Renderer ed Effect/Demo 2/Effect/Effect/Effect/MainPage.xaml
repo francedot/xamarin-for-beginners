@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Effect"
+             xmlns:effects="clr-namespace:Effect.Effects;assembly=Effect"
+             x:Class="Effect.MainPage">
+
+    <Label Text="&#xf2d5;"
+           FontSize="96"
+           TextColor="DeepSkyBlue"
+           VerticalOptions="Center"
+           HorizontalOptions="Center">
+        <Label.Effects>
+            <effects:FontAwesomeEffect/>
+        </Label.Effects>
+    </Label>
+
+</ContentPage>
