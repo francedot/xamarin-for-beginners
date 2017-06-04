@@ -1,8 +1,6 @@
 ﻿using System.ComponentModel;
-using Android.Content;
 using Android.Support.Design.Widget;
 using Android.Text;
-using Android.Views;
 using Android.Views.InputMethods;
 using Android.Widget;
 using Java.Lang;
@@ -10,14 +8,12 @@ using Renderer.Controls;
 using Renderer.Droid.Renderers;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Android;
-using Application = Android.App.Application;
 using Color = Xamarin.Forms.Color;
 
 [assembly: ExportRenderer(typeof(FloatingLabelEntry), typeof(FloatingLabelEntryRenderer))]
-
 namespace Renderer.Droid.Renderers
 {
-    public class FloatingLabelEntryRenderer : ViewRenderer<FloatingLabelEntry, TextInputLayout>, ITextWatcher, TextView.IOnEditorActionListener
+    public class FloatingLabelEntryRenderer : ViewRenderer<FloatingLabelEntry, TextInputLayout>, ITextWatcher
     {
         protected override void OnElementChanged(ElementChangedEventArgs<FloatingLabelEntry> e)
         {
@@ -32,9 +28,7 @@ namespace Renderer.Droid.Renderers
             textInputLayout.HintAnimationEnabled = true;
             textInputLayout.EditText.ShowSoftInputOnFocus = true;
 
-            textInputLayout.EditText.FocusChange += ControlOnFocusChange;
             textInputLayout.EditText.AddTextChangedListener(this);
-            textInputLayout.EditText.SetOnEditorActionListener(this);
             textInputLayout.EditText.ImeOptions = ImeAction.Done;
 
             textInputLayout.EditText.Text = Element.Text;
@@ -79,45 +73,6 @@ namespace Renderer.Droid.Renderers
                 Control.EditText.InputType = Element.Keyboard.ToInputType();
             }
         }
-
-        private void ControlOnFocusChange(object sender, FocusChangeEventArgs focusChangeEventArgs)
-        {
-            if (focusChangeEventArgs.HasFocus)
-            {
-                var inputMethodManager = (InputMethodManager) Application.Context.GetSystemService(Context.InputMethodService);
-
-                Control.EditText.PostDelayed(() =>
-                    {
-                        Control.EditText.RequestFocus();
-                        inputMethodManager.ShowSoftInput(Control.EditText, 0);
-                    },
-                    100);
-            }
-
-            ((IElementController) Element).SetValueFromRenderer(VisualElement.IsFocusedProperty, focusChangeEventArgs.HasFocus);
-        }
-
-        #region IOnEditorActionListener
-
-        public bool OnEditorAction(TextView v, ImeAction actionId, KeyEvent e)
-        {
-            if (actionId != ImeAction.Done &&
-                (actionId != ImeAction.ImeNull || e.KeyCode != Keycode.Enter))
-            {
-                return true;
-            }
-
-            Control.ClearFocus();
-
-            // Hides Keyboard
-            var manager = (InputMethodManager)Application.Context.GetSystemService(Context.InputMethodService);
-            manager.HideSoftInputFromWindow(Control.EditText.WindowToken, 0);
-
-            ((IEntryController)Element).SendCompleted();
-            return true;
-        }
-
-        #endregion
 
         #region ITextWatcher
 
