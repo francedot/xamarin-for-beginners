@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<unity:PrismApplication x:Class="MyReddit.App"
+                        xmlns="http://xamarin.com/schemas/2014/forms"
+                        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                        xmlns:converters="clr-namespace:MyReddit.Converters;assembly=myReddit"
+                        xmlns:unity="clr-namespace:Prism.Unity;assembly=Prism.Unity.Forms">
+    <unity:PrismApplication.Resources>
+      <ResourceDictionary>
+
+          <!--  Converters  -->
+          <converters:SelectedItemConverter x:Key="SelectedItemConverter" />
+          <converters:ItemTappedConverter x:Key="ItemTappedConverter" />
+          <converters:DateTimeConverter x:Key="DateTimeConverter" />
+          <converters:DummyConverter x:Key="DummyConverter" />
+
+          <Color x:Key="AccentColor">#FE4006</Color>
+          <Color x:Key="InverseTextColor">White</Color>
+
+          <Color x:Key="ComplementColor">#384f63</Color>
+          <Color x:Key="ComplementColorDark">#272f36</Color>
+          <Color x:Key="ComplementColorDarker">#1f252a</Color>
+          <Color x:Key="TranslucidBlack">#44000000</Color>
+          <Color x:Key="TranslucidWhite">#22ffffff</Color>
+
+          <Color x:Key="LabelButtonColor">#ffffff</Color>
+
+          <Color x:Key="PlaceholderColor">#22ffffff</Color>
+          <Color x:Key="PlaceholderColorEntry">#77FFFFFF</Color>
+          <Color x:Key="MainMenuBackgroundColor">#333337</Color>
+          <Color x:Key="PageBackgroundColor">#000000</Color>
+          <Color x:Key="MainMenuSeparatorColor">#253642</Color>
+          <Color x:Key="ListViewSeparatorColor">#77CCCCCC</Color>
+          <Color x:Key="LightBorderColor">#FFF</Color>
+
+          <Color x:Key="WalkthroughStepBackgroundColor1">#1CBCB4</Color>
+          <Color x:Key="WalkthroughStepIconColor1">#FFF</Color>
+
+          <Color x:Key="CategoryColor1">#FF0000</Color>
+          <Color x:Key="ListViewItemTextColor">#FF212121</Color>
+
+          <FileImageSource x:Key="RedditLogo" File="Assets/RedditLogo.png" />
+          <FileImageSource x:Key="HamburguerIcon" File="hamburguer_icon.png" />
+          <FileImageSource x:Key="AvatarPlaceholder" File="Assets/AvatarPlaceholder.jpg" />
+          <FileImageSource x:Key="Placeholder" File="Assets/Placeholder.jpg" />
+
+          <Style x:Key="AppNameStyle" TargetType="Label">
+              <Setter Property="FontSize">
+                  <Setter.Value>
+                      <OnPlatform x:TypeArguments="x:Double"
+                                  Android="22"
+                                  iOS="20" />
+                  </Setter.Value>
+              </Setter>
+              <Setter Property="TextColor" Value="White" />
+          </Style>
+
+          <Style x:Key="SubHeaderAppNameStyle" TargetType="Label">
+              <Setter Property="FontSize">
+                  <Setter.Value>
+                      <OnPlatform x:TypeArguments="x:Double"
+                                  Android="16"
+                                  iOS="14" />
+                  </Setter.Value>
+              </Setter>
+              <Setter Property="TextColor" Value="{StaticResource AccentColor}" />
+          </Style>
+
+          <Style x:Key="MainMenuListViewStyle" TargetType="ListView">
+              <Setter Property="BackgroundColor" Value="{StaticResource MainMenuBackgroundColor}" />
+              <Setter Property="SeparatorVisibility" Value="Default" />
+              <Setter Property="SeparatorColor" Value="{StaticResource MainMenuSeparatorColor}" />
+              <Setter Property="RowHeight" Value="44" />
+          </Style>
+
+          <Style x:Key="MainMenuHeaderStyle" TargetType="Label">
+              <Setter Property="BackgroundColor" Value="{StaticResource MainMenuBackgroundColor}" />
+              <Setter Property="TextColor" Value="White" />
+              <Setter Property="VerticalTextAlignment" Value="Center" />
+              <Setter Property="FontSize" Value="18" />
+              <Setter Property="FontAttributes" Value="Bold" />
+          </Style>
+
+          <Style x:Key="MainMenuLabelStyle" TargetType="Label">
+              <Setter Property="TextColor" Value="White" />
+              <Setter Property="VerticalTextAlignment" Value="Center" />
+              <Setter Property="TranslationX" Value="10" />
+              <Setter Property="FontSize" Value="18" />
+              <Setter Property="HorizontalOptions" Value="StartAndExpand" />
+              <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+          </Style>
+
+
+      </ResourceDictionary>
+    </unity:PrismApplication.Resources>
+</unity:PrismApplication>

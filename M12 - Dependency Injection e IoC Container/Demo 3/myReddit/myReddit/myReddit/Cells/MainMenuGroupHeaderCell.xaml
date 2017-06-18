@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ViewCell x:Class="MyReddit.Cells.MainMenuGroupHeaderCell"
+          xmlns="http://xamarin.com/schemas/2014/forms"
+          xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+
+    <ContentView BackgroundColor="{StaticResource MainMenuBackgroundColor}">
+        <StackLayout HorizontalOptions="StartAndExpand"
+                     Orientation="Horizontal"
+                     Padding="24,0,0,0"
+                     VerticalOptions="CenterAndExpand">
+
+            <Label Style="{StaticResource MainMenuHeaderStyle}" Text="{Binding Key}" />
+        </StackLayout>
+    </ContentView>
+</ViewCell>

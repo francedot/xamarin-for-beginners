@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<resources>
+
+	<color name="primary">@color/AccentColor</color>
+	<color name="primary_dark">@color/AccentColor</color>
+	<color name="actionbar_tab_indicator">@color/AccentColor</color>
+
+	<!-- Splash styles -->
+	<!--<style name="Theme.Splash" parent="Theme.AppCompat.Light.NoActionBar">
+		<item name="android:windowBackground">@drawable/splash</item>
+	</style>-->
+
+	<!-- Theme -->
+	<style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+
+		<!-- Set AppCompat’s color theming attrs -->
+
+		<!-- colorPrimary is used for the default action bar background -->
+		<item name="colorPrimary">@color/AccentColor</item>
+
+		<!-- colorPrimaryDark is used for the status bar 
+		<item name="colorPrimaryDark">@color/AccentColor</item>-->
+
+		<!-- colorAccent is used as the default value for colorControlActivated,
+		     which is used to tint widgets -->
+		<item name="colorAccent">@color/AccentColor</item>
+
+	    <item name="windowActionBar">false</item>
+		<item name="windowNoTitle">true</item>
+
+		<!-- Used on ListView selected items -->
+		<item name="android:color">@color/AccentColor</item>
+		<item name="android:colorPressedHighlight">@color/AccentColor</item>
+		<item name="android:colorLongPressedHighlight">@color/AccentColor</item>
+		<item name="android:colorFocusedHighlight">@color/AccentColor</item>
+		<item name="android:colorActivatedHighlight">@color/AccentColor</item>
+		<item name="android:activatedBackgroundIndicator">@color/AccentColor</item>
+
+
+		<!-- Main theme colors -->
+		<!--   your app branding color for the app bar -->
+		<item name="android:colorPrimary">@color/primary</item>
+		<!--   darker variant for the status bar and contextual app bars 
+		<item name="android:colorPrimaryDark">@color/primary_dark</item>-->
+		<!--   theme UI controls like checkboxes and text fields -->
+		<item name="android:colorAccent">@color/AccentColor</item>
+
+		<!-- TimePicker dialog-->
+		<item name="android:dialogTheme">@style/AppTheme.Dialog</item> 
+
+		<item name="android:timePickerDialogTheme">@style/AppTheme.Dialog</item>
+		<item name="android:datePickerDialogTheme">@style/AppTheme.Dialog</item>
+		<item name="alertDialogTheme">@style/AppTheme.AlertDialog</item>
+
+		<item name="drawerArrowStyle">@style/AppTheme.DrawerArrowStyle</item>
+
+
+		<item name="android:windowContentTransitions">true</item>
+        <item name="android:windowAllowEnterTransitionOverlap">true</item>
+        <item name="android:windowAllowReturnTransitionOverlap">true</item>
+        <item name="android:windowSharedElementEnterTransition">@android:transition/move</item>
+        <item name="android:windowSharedElementExitTransition">@android:transition/move</item>
+
+	</style>
+
+	<!-- Adding animation to hamburguer icon, and overriding color  to fix weird color change bug on app compat -->
+	<style name="AppTheme.DrawerArrowStyle" parent="Widget.AppCompat.DrawerArrowToggle">
+		<item name="spinBars">true</item>
+		<item name="color">#FFFFFF</item>
+	</style>
+
+	<!-- DatePicker style -->
+	<style name="AppTheme.Dialog" parent="android:Theme.Material.Light.Dialog.Alert">
+		<item name="android:colorAccent">@color/AccentColor</item>
+		<item name="android:textColorPrimary">@color/AccentColor</item>
+	</style>
+
+	<style name="AppTheme.DialogTitleTextStyle">
+		<item name="android:textColor">@color/AccentColor</item>
+		<item name="android:textAppearance">@style/TextAppearance.AppCompat.Title</item>
+	</style>
+
+	<style name="AppTheme.AlertDialog" parent="android:Theme.Material.Light.Dialog.Alert">
+		<item name="android:colorAccent">@color/AccentColor</item>
+		<item name="android:windowTitleStyle">@style/AppTheme.DialogTitleTextStyle</item>
+	</style>
+
+</resources>

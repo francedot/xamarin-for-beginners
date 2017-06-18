@@ -1,0 +1,13 @@
+﻿<Application x:Class="MyReddit.UWP.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="using:MyReddit.UWP"
+             RequestedTheme="Light">
+
+    <Application.Resources>
+
+        <SolidColorBrush x:Key="SystemControlHighlightListAccentLowBrush" Color="#FE4006" />
+
+    </Application.Resources>
+
+</Application>

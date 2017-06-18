@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage x:Class="MyReddit.Views.RootMasterDetailPage"
+                  xmlns="http://xamarin.com/schemas/2014/forms"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                  xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+                  xmlns:views="clr-namespace:MyReddit.Views;assembly=myReddit"
+                  prism:ViewModelLocator.AutowireViewModel="True">
+    <MasterDetailPage.Master>
+        <views:SubredditsMenuPage BindingContext="{Binding .}" />
+    </MasterDetailPage.Master>
+
+</MasterDetailPage>

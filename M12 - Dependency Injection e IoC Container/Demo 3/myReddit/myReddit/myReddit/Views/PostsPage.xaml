@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage x:Class="MyReddit.Views.PostsPage"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:behaviors="clr-namespace:MyReddit.Behaviors;assembly=myReddit"
+             xmlns:cells="clr-namespace:MyReddit.Cells;assembly=myReddit"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             Title="myReddit"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             BackgroundColor="{StaticResource PageBackgroundColor}">
+    <Grid>
+        <ActivityIndicator HeightRequest="40"
+                           HorizontalOptions="Center"
+                           IsRunning="True"
+                           IsVisible="{Binding IsLoading}"
+                           VerticalOptions="Center"
+                           Color="{StaticResource AccentColor}" />
+
+        <ListView BackgroundColor="{StaticResource PageBackgroundColor}"
+                  HasUnevenRows="True"
+                  ItemSelected="ListView_OnItemSelected"
+                  ItemsSource="{Binding Posts}"
+                  SeparatorColor="{StaticResource MainMenuBackgroundColor}"
+                  SeparatorVisibility="Default">
+            <ListView.Behaviors>
+                <behaviors:EventToCommandBehavior Command="{Binding ShowPostDetailCommand}"
+                                                  Converter="{StaticResource ItemTappedConverter}"
+                                                  EventName="ItemTapped" />
+            </ListView.Behaviors>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <cells:PostCell />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </Grid>
+</ContentPage>

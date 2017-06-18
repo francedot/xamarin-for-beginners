@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Movies.Views.DetailPage">
+    <ListView ItemsSource="{Binding Movies}"
+              RowHeight="220"
+              ItemTapped="ListView_OnItemTapped">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="148"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Image Source="{Binding Poster}"
+                               HeightRequest="220"
+                               Aspect="Fill"/>
+                        <Grid Grid.Column="1" Padding="4">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <StackLayout>
+                                <Label Text="{Binding Title}"
+                                       FontSize="20"
+                                       FontAttributes="Bold"/>
+                                <Label Text="{Binding Director}"
+                                       FontSize="16"
+                                       FontAttributes="Italic"/>
+                            </StackLayout>
+                            <Grid Grid.Row="1"
+                                  VerticalOptions="End"
+                                  Margin="0,0,0,8">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="4*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="{Binding Country}" />
+                                    <Label Text="-" />
+                                    <Label Text="{Binding Year}" />
+                                </StackLayout>
+                                <Label Grid.Column="1"
+                                       FontSize="16"
+                                       FontAttributes="Bold"
+                                       HorizontalOptions="End"
+                                       Text="{Binding Rating, StringFormat='{0:0.0}'}"
+                                       Margin="0,0,4,0"/>
+                            </Grid>
+                        </Grid>
+                    </Grid>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+</ContentPage>

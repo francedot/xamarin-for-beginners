@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentView x:Class="MyReddit.Controls.AppLogo"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+
+    <Grid HorizontalOptions="Start" VerticalOptions="Start">
+        <!--  LOGO  -->
+        <ContentView Padding="20,20,20,0">
+            <Grid HorizontalOptions="Start"
+                  Padding="0"
+                  VerticalOptions="Start">
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+
+                <Image Grid.Column="0"
+                       HeightRequest="120"
+                       Source="{DynamicResource RedditLogo}" />
+
+                <StackLayout Grid.Column="1"
+                             HorizontalOptions="Start"
+                             Orientation="Vertical"
+                             Spacing="0"
+                             VerticalOptions="Start">
+                    <Label FontAttributes="Bold"
+                           Style="{DynamicResource AppNameStyle}"
+                           Text="myReddit"
+                           VerticalTextAlignment="Start" />
+
+                    <Label Style="{DynamicResource SubHeaderAppNameStyle}"
+                           Text="Another client for Reddit"
+                           TextColor="Red"
+                           VerticalTextAlignment="Start" />
+
+                </StackLayout>
+
+            </Grid>
+        </ContentView>
+
+    </Grid>
+</ContentView>

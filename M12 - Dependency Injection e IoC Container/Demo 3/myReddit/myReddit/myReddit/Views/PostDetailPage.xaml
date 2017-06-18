@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage x:Class="MyReddit.Views.PostDetailPage"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:abstractions="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin.Abstractions"
+             xmlns:cells="clr-namespace:MyReddit.Cells;assembly=myReddit"
+             xmlns:controls="clr-namespace:MyReddit.Controls;assembly=myReddit"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             BackgroundColor="Black">
+    <ScrollView BackgroundColor="{StaticResource PageBackgroundColor}">
+        <Grid>
+            <Image Aspect="AspectFill"
+                   HeightRequest="320"
+                   HorizontalOptions="FillAndExpand"
+                   Opacity="0.8"
+                   Source="{Binding Post.ThumbnailUri}"
+                   VerticalOptions="StartAndExpand" />
+            <StackLayout Padding="0"
+                         Spacing="0"
+                         VerticalOptions="FillAndExpand">
+                <StackLayout Padding="0"
+                             Spacing="0"
+                             VerticalOptions="FillAndExpand">
+                    <StackLayout AnchorX="0"
+                                 HeightRequest="260"
+                                 Padding="20">
+                        <!--  HEADERS  -->
+                        <Label FontAttributes="None"
+                               FontSize="35"
+                               HeightRequest="88"
+                               LineBreakMode="WordWrap"
+                               Text="{Binding Post.Title}"
+                               TextColor="White"
+                               VerticalOptions="EndAndExpand"
+                               VerticalTextAlignment="Start" />
+                        <StackLayout Orientation="Horizontal" VerticalOptions="End">
+                            <abstractions:CircleImage BorderColor="{StaticResource AccentColor}"
+                                                      BorderThickness="2"
+                                                      HeightRequest="45"
+                                                      HorizontalOptions="Start"
+                                                      Source="{StaticResource AvatarPlaceholder}"
+                                                      WidthRequest="45" />
+                            <Label HorizontalOptions="End"
+                                   Text="{Binding Post.Author,
+                                                  StringFormat='By {0:F0}'}"
+                                   TextColor="White"
+                                   VerticalOptions="Center" />
+                        </StackLayout>
+                    </StackLayout>
+                    <StackLayout BackgroundColor="Black"
+                                 Orientation="Horizontal"
+                                 Padding="20">
+                        <Label HorizontalOptions="StartAndExpand"
+                               Text="{Binding Post.Subreddit}"
+                               TextColor="White" />
+                        <Label HorizontalOptions="StartAndExpand"
+                               Text="{Binding Post.DateCreated, Converter={StaticResource DateTimeConverter}"
+                               TextColor="#8c8c8c" />
+                        <StackLayout HorizontalOptions="StartAndExpand" Orientation="Horizontal">
+                            <controls:FontAwesomeIcon FontSize="16"
+                                                      Text="&#xf164;"
+                                                      TextColor="{StaticResource AccentColor}" />
+                            <controls:FontAwesomeIcon FontSize="16"
+                                                      Text="{Binding Post.Likes}"
+                                                      TextColor="{StaticResource AccentColor}" />
+                        </StackLayout>
+                        <StackLayout HorizontalOptions="StartAndExpand" Orientation="Horizontal">
+                            <controls:FontAwesomeIcon FontSize="16"
+                                                      Text="&#xf086; "
+                                                      TextColor="{StaticResource AccentColor}" />
+                            <controls:FontAwesomeIcon FontSize="16"
+                                                      Text="{Binding Post.CommentsCount}"
+                                                      TextColor="{StaticResource AccentColor}" />
+                        </StackLayout>
+                    </StackLayout>
+                    <BoxView BackgroundColor="{StaticResource MainMenuBackgroundColor}" HeightRequest="1" />
+                    <StackLayout Padding="20">
+                        <Label Text="{Binding Post.Content}"
+                               TextColor="White"
+                               VerticalOptions="EndAndExpand" />
+                    </StackLayout>
+                    <BoxView BackgroundColor="{StaticResource MainMenuBackgroundColor}" HeightRequest="1" />
+                </StackLayout>
+                <!--  COMMENTS  -->
+                <StackLayout Padding="20">
+                    <Label BindingContext="{Binding Comments}"
+                           HorizontalOptions="StartAndExpand"
+                           Text="{Binding Count,
+                                          StringFormat='{0:F0} COMMENTS'}"
+                           TextColor="White"
+                           VerticalOptions="Start" />
+                </StackLayout>
+                <Grid VerticalOptions="FillAndExpand">
+                    <ActivityIndicator HeightRequest="40"
+                                       HorizontalOptions="Center"
+                                       IsRunning="True"
+                                       IsVisible="{Binding AreCommentsLoading}"
+                                       VerticalOptions="Center"
+                                       Color="{StaticResource AccentColor}" />
+                    <!--  COMMENTS LIST  -->
+                    <controls:ItemsRepeater ItemsSource="{Binding Comments}">
+                        <controls:ItemsRepeater.ItemTemplate>
+                            <DataTemplate>
+                                <cells:CommentCell />
+                            </DataTemplate>
+                        </controls:ItemsRepeater.ItemTemplate>
+                    </controls:ItemsRepeater>
+                </Grid>
+            </StackLayout>
+        </Grid>
+    </ScrollView>
+</ContentPage>

@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ViewCell x:Class="MyReddit.Cells.CommentCell"
+          xmlns="http://xamarin.com/schemas/2014/forms"
+          xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+          xmlns:abstractions="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin.Abstractions">
+    <ViewCell.View>
+        <StackLayout>
+
+            <StackLayout HorizontalOptions="FillAndExpand"
+                         Orientation="Horizontal"
+                         Padding="20,10"
+                         Spacing="5"
+                         VerticalOptions="StartAndExpand">
+
+                <abstractions:CircleImage Aspect="AspectFill"
+                                          BorderColor="{StaticResource AccentColor}"
+                                          BorderThickness="2"
+                                          HeightRequest="32"
+                                          HorizontalOptions="Center"
+                                          Source="{StaticResource AvatarPlaceholder}"
+                                          TranslationY="7"
+                                          VerticalOptions="Start"
+                                          WidthRequest="32" />
+
+                <StackLayout HorizontalOptions="StartAndExpand"
+                             Orientation="Horizontal"
+                             Padding="0"
+                             Spacing="0">
+
+                    <StackLayout HorizontalOptions="FillAndExpand"
+                                 Padding="10"
+                                 Spacing="0">
+
+                        <Label FontAttributes="Bold"
+                               HorizontalOptions="FillAndExpand"
+                               Text="{Binding Author}"
+                               TextColor="White"
+                               VerticalOptions="StartAndExpand" />
+
+                        <StackLayout HorizontalOptions="FillAndExpand"
+                                     Padding="0,0,0,10"
+                                     Spacing="0">
+                            <Label FontSize="12"
+                                   Text="{Binding DateCreated,
+                                                  Converter={StaticResource DateTimeConverter}}"
+                                   TextColor="#838383" />
+                        </StackLayout>
+
+                        <Label HorizontalOptions="FillAndExpand"
+                               LineBreakMode="WordWrap"
+                               Text="{Binding Content}"
+                               TextColor="White"
+                               VerticalOptions="FillAndExpand" />
+
+                    </StackLayout>
+
+                </StackLayout>
+            </StackLayout>
+
+            <BoxView BackgroundColor="{StaticResource MainMenuBackgroundColor}" HeightRequest="1" />
+
+        </StackLayout>
+    </ViewCell.View>
+</ViewCell>
