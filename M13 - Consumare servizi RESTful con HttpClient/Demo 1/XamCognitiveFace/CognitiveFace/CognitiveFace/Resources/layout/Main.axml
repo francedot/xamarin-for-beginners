@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+  <ScrollView android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:fillViewport="true"
+              android:scrollbars = "vertical"
+              android:scrollbarStyle="insideInset">
+    <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+      <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingBottom="@dimen/activity_vertical_margin">
+        <ImageView
+          android:layout_width="match_parent" 
+          android:layout_height="400dp"
+          android:adjustViewBounds="true"
+          android:id="@+id/imageView" />
+      
+        <RelativeLayout android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+          <TextView android:id="@+id/placeholderTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Choose a Photo and press Play"
+                    android:gravity="center_horizontal"
+                    android:textSize="18dp"
+                    android:textStyle="italic"
+                    android:paddingTop="12dp"/>
+          <LinearLayout android:id="@+id/contentLayout"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:visibility="gone">
+            <!--General Section-->
+            <TextView android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:textColor="@color/DarkGray"
+                      android:text="General"
+                      android:textSize="20dp"
+                      android:textStyle="bold"
+                      android:paddingTop="8dp"/>
+            <LinearLayout
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:orientation="horizontal"
+              android:paddingTop="4dp"
+              android:paddingLeft="4dp"
+              android:paddingBottom="8dp">
+
+              <LinearLayout
+                android:layout_width="0dp"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:layout_height="wrap_content" >
+          
+                <LinearLayout android:orientation="horizontal"
+                              android:layout_width="wrap_content"
+                              android:layout_height="wrap_content">
+                  <TextView android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/DarkGray"
+                            android:text="Age:"
+                            android:textSize="18dp"/>  
+                  <TextView android:id="@+id/ageTextView"
+                            android:text=""
+                            android:paddingLeft="8dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/DarkGray"
+                            android:textSize="18dp"/>  
+                </LinearLayout>
+      
+                <LinearLayout android:orientation="horizontal"
+                              android:layout_width="wrap_content"
+                              android:layout_height="wrap_content">
+                  <TextView android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/DarkGray"
+                            android:text="Gender:"
+                            android:textSize="18dp"/>  
+                  <TextView android:id="@+id/genderTextView"
+                            android:text=""
+                            android:paddingLeft="8dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/DarkGray"
+                            android:textSize="18dp"/>  
+                </LinearLayout>
+      
+                <LinearLayout android:orientation="horizontal"
+                              android:layout_width="wrap_content"
+                              android:layout_height="wrap_content">
+                  <TextView android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/DarkGray"
+                            android:text="Smile:"
+                            android:textSize="18dp"/>  
+                  <TextView android:id="@+id/smileTextView"
+                            android:text=""
+                            android:paddingLeft="8dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/DarkGray"
+                            android:textSize="18dp"/>  
+                </LinearLayout>
+        
+              </LinearLayout>
+
+              <LinearLayout
+                android:layout_width="0dp"
+                android:orientation="vertical"
+                android:layout_weight="1.5"
+                android:layout_height="wrap_content" >
+                <LinearLayout android:orientation="horizontal"
+                              android:layout_width="wrap_content"
+                              android:layout_height="wrap_content">
+                  <TextView android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/DarkGray"
+                            android:text="Glasses:"
+                            android:textSize="18dp"/>  
+                  <TextView android:id="@+id/glassesTextView"
+                            android:text=""
+                            android:paddingLeft="8dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/DarkGray"
+                            android:textSize="18dp"/>  
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal"
+                              android:layout_width="wrap_content"
+                              android:layout_height="wrap_content">
+                  <TextView android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/DarkGray"
+                            android:text="Head Pose:"
+                            android:textSize="18dp"/>  
+                  <TextView android:id="@+id/headPoseTextView"
+                            android:text=""
+                            android:paddingLeft="8dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/DarkGray"
+                            android:textSize="18dp"/>  
+                </LinearLayout>
+              </LinearLayout>
+
+            </LinearLayout>
+            
+            <!--Emotion Section-->
+            <TextView android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:textColor="@color/DarkGray"
+                      android:text="Emotions"
+                      android:textSize="20dp"
+                      android:textStyle="bold"/>  
+            <LinearLayout
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:orientation="horizontal"
+              android:paddingTop="4dp"
+              android:paddingLeft="4dp">
+
+              <LinearLayout
+                android:layout_width="0dp"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:layout_height="wrap_content" >
+          
+                <LinearLayout android:orientation="horizontal"
+                              android:layout_width="wrap_content"
+                              android:layout_height="wrap_content">
+                  <TextView android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/DarkGray"
+                            android:text="Anger:"
+                            android:textSize="18dp"/>  
+                  <TextView android:id="@+id/angerTextView"
+                            android:text=""
+                            android:paddingLeft="8dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/DarkGray"
+                            android:textSize="18dp"/>  
+                </LinearLayout>
+      
+                <LinearLayout android:orientation="horizontal"
+                              android:layout_width="wrap_content"
+                              android:layout_height="wrap_content">
+                  <TextView android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/DarkGray"
+                            android:text="Contempt:"
+                            android:textSize="18dp"/>  
+                  <TextView android:id="@+id/contemptTextView"
+                            android:text=""
+                            android:paddingLeft="8dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/DarkGray"
+                            android:textSize="18dp"/>  
+                </LinearLayout>
+      
+                <LinearLayout android:orientation="horizontal"
+                              android:layout_width="wrap_content"
+                              android:layout_height="wrap_content">
+                  <TextView android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/DarkGray"
+                            android:text="Disgust:"
+                            android:textSize="18dp"/>  
+                  <TextView android:id="@+id/disgustTextView"
+                            android:text=""
+                            android:paddingLeft="8dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/DarkGray"
+                            android:textSize="18dp"/>  
+                </LinearLayout>
+        
+              </LinearLayout>
+
+              <LinearLayout
+                android:layout_width="0dp"
+                android:orientation="vertical"
+                android:layout_weight="1.5"
+                android:layout_height="wrap_content" >
+                <LinearLayout android:orientation="horizontal"
+                              android:layout_width="wrap_content"
+                              android:layout_height="wrap_content">
+                  <TextView android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/DarkGray"
+                            android:text="Fear:"
+                            android:textSize="18dp"/>  
+                  <TextView android:id="@+id/fearTextView"
+                            android:text=""
+                            android:paddingLeft="8dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/DarkGray"
+                            android:textSize="18dp"/>  
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal"
+                              android:layout_width="wrap_content"
+                              android:layout_height="wrap_content">
+                  <TextView android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/DarkGray"
+                            android:text="Happiness:"
+                            android:textSize="18dp"/>  
+                  <TextView android:id="@+id/happinessTextView"
+                            android:text=""
+                            android:paddingLeft="8dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/DarkGray"
+                            android:textSize="18dp"/>  
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal"
+                              android:layout_width="wrap_content"
+                              android:layout_height="wrap_content">
+                  <TextView android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/DarkGray"
+                            android:text="Neutral:"
+                            android:textSize="18dp"/>  
+                  <TextView android:id="@+id/neutralTextView"
+                            android:text=""
+                            android:paddingLeft="8dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/DarkGray"
+                            android:textSize="18dp"/>  
+                </LinearLayout>
+              </LinearLayout>
+
+            </LinearLayout>   
+            <LinearLayout android:orientation="horizontal"
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:paddingLeft="4dp">
+              <TextView android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/DarkGray"
+                        android:text="Sadness:"
+                        android:textSize="18dp"/>  
+              <TextView android:id="@+id/sadnessTextView"
+                        android:text=""
+                        android:paddingLeft="8dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/DarkGray"
+                        android:textSize="18dp"/>  
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal"
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:paddingLeft="4dp"
+                          android:paddingBottom="4dp">
+              <TextView android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/DarkGray"
+                        android:text="Surprise:"
+                        android:textSize="18dp"/>  
+              <TextView android:id="@+id/surpriseTextView"
+                        android:text=""
+                        android:paddingLeft="8dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/DarkGray"
+                        android:textSize="18dp"/>  
+            </LinearLayout>
+          </LinearLayout>
+        </RelativeLayout>
+      </LinearLayout>
+    </RelativeLayout>
+  </ScrollView>
+  
+  <LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="right"
+    android:orientation="vertical"
+    android:layout_alignParentBottom="true"
+    android:layout_alignParentRight="true"
+    android:paddingBottom="8dp">
+    <android.support.design.widget.FloatingActionButton
+      android:id="@+id/browseImageButton"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="fill"
+      app:backgroundTint="@color/DarkGray"
+      android:layout_margin="8dp"
+      android:clickable="true"
+      android:src="@drawable/ImageFile"
+      android:layout_alignParentRight ="true"
+      android:layout_alignParentBottom="true" />
+    <android.support.design.widget.FloatingActionButton
+      android:id="@+id/detectButton"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="bottom"
+      app:backgroundTint="@color/Green"
+      android:layout_margin="8dp"
+      android:clickable="true"
+      android:src="@drawable/Play"
+      android:layout_alignParentRight ="true"
+      android:layout_alignParentBottom="true" />
+  </LinearLayout>
+
+</RelativeLayout>
