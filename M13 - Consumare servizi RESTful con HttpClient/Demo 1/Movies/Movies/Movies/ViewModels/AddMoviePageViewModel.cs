@@ -13,7 +13,7 @@ namespace Movies.ViewModels
         {
             SaveMovieCommand = new Command(async () =>
             {
-                await MoviesSource.PutMovieAsync(0, Movie);
+                await MoviesSource.InsertMovieAsync(Movie, "0");
                 MessagingCenter.Send<AddMoviePageViewModel>(this, "RefreshMovies");
             });
         }
@@ -31,7 +31,7 @@ namespace Movies.ViewModels
             await Task.Yield();
             Movie = new Movie
             {
-                Title = "Contoso Geeks and where to find them",
+                Title = "Contoso Geeks and Where to Find Them",
                 Year = "2017",
                 Director = "David Yates",
                 Country = "UK, USA",

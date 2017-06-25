@@ -1,7 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Movies.Views.DetailPage">
+             x:Class="Movies.Views.DetailPage"
+             x:Name="DetailPage">
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Refresh" Command="{Binding RefreshCommand}">
             <ToolbarItem.Icon>
@@ -32,6 +33,12 @@
         <ListView.ItemTemplate>
             <DataTemplate>
                 <ViewCell>
+                    <ViewCell.ContextActions>
+                        <MenuItem Clicked="OnDeleteItem"
+                                  CommandParameter="{Binding .}"
+                                  Text="Delete"
+                                  IsDestructive="True" />
+                    </ViewCell.ContextActions>
                     <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="148"/>

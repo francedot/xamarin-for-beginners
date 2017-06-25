@@ -7,9 +7,9 @@ namespace Movies.Services
     public interface IMoviesSource
     {
         Task<IList<Movie>> GetMoviesAsync();
-        Task<Movie> GetMovieAsync(int id);
-        Task PostMoviesAsync(List<Movie> movies);
-        Task PutMovieAsync(int id, Movie movie);
-        Task DeleteMovieAsync(int id);
+        Task<Movie> GetMovieAsync(string id);
+        Task UpdateMoviesAsync(List<Movie> movies);
+        Task InsertMovieAsync(Movie movie, string id = null);
+        Task RemoveMovieAsync(string id);
     }
 }

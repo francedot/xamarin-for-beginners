@@ -94,7 +94,7 @@ namespace Movies.Backend.Controllers
                 return BadRequest();
             }
 
-            if (id >= Movies.Count)
+            if (id != 0 && id >= Movies.Count)
             {
                 return BadRequest();
             }

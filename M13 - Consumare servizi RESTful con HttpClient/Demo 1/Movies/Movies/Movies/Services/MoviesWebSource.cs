@@ -7,7 +7,7 @@ namespace Movies.Services
     public class MoviesWebSource : IMoviesSource
     {
         private string BaseUriString { get; } = "http://moviesbackend.azurewebsites.net/api/";
-        
+
         #region CRUD
 
         public async Task<IList<Movie>> GetMoviesAsync()
@@ -18,7 +18,7 @@ namespace Movies.Services
             return movies;
         }
 
-        public async Task<Movie> GetMovieAsync(int id)
+        public async Task<Movie> GetMovieAsync(string id)
         {
             var movie =
                 await JsonRestApi.GetAsync<Movie>($"{BaseUriString}movies/{id}");
@@ -26,18 +26,18 @@ namespace Movies.Services
             return movie;
         }
 
-        public async Task PostMoviesAsync(List<Movie> movies)
+        public async Task UpdateMoviesAsync(List<Movie> movies)
         {
             await JsonRestApi.PostAsync<List<Movie>>($"{BaseUriString}movies", movies);
         }
 
-        public async Task PutMovieAsync(int id, Movie movie)
+        public async Task InsertMovieAsync(Movie movie, string id)
         {
             await JsonRestApi.PutAsync<Movie>($"{BaseUriString}movies/{id}", movie);
         }
 
 
-        public async Task DeleteMovieAsync(int id)
+        public async Task RemoveMovieAsync(string id)
         {
             await JsonRestApi.DeleteAsync($"{BaseUriString}movies/{id}");
         }

@@ -19,20 +19,6 @@ namespace Movies.Views
         {
             base.OnAppearing();
             await _viewModel.OnAppearingAsync();
-
-            //var source = new MoviesWebSource();
-
-            //var movies = await source.GetMoviesAsync();
-            //await source.DeleteMovieAsync(0);
-
-
-            ////await source.PutMovieAsync(0, movie1);
-
-            ////movies.Insert(0, movie);
-
-            ////await source.PostMoviesAsync(movies.ToList());
-
-            //var updatedMovies = await source.GetMoviesAsync();
         }
     }
 }

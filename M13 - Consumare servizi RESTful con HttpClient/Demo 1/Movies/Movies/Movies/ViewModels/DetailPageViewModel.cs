@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using System.Windows.Input;
 using Movies.Models;
 using Xamarin.Forms;
 
@@ -15,6 +14,11 @@ namespace Movies.ViewModels
             {
                 MessagingCenter.Send<DetailPageViewModel>(this, "RefreshMovies");
             });
+            DeleteCommand = new Command<Movie>(async movie =>
+            {
+                await MoviesSource.RemoveMovieAsync($"{AllMovies.IndexOf(movie)}");
+                MessagingCenter.Send<DetailPageViewModel>(this, "RefreshMovies");
+            });
             NavigateCommand = new Command<Movie>(movie =>
             {
                 MessagingCenter.Send<DetailPageViewModel, Movie>(this, "SelectedMovie", movie);
@@ -28,6 +32,7 @@ namespace Movies.ViewModels
         }
 
         public Command RefreshCommand { get; }
+        public Command<Movie> DeleteCommand { get; }
         public Command<Movie> NavigateCommand { get; }
     }
 }

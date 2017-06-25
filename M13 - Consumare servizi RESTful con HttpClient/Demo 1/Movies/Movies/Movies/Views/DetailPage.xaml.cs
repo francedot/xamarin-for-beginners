@@ -35,5 +35,14 @@ namespace Movies.Views
                 listView.IsRefreshing = false;
             }
         }
+
+        private void OnDeleteItem(object sender, EventArgs e)
+        {
+            var menuItem = sender as MenuItem;
+            if (ViewModel?.DeleteCommand != null && ViewModel.DeleteCommand.CanExecute(menuItem?.CommandParameter))
+            {
+                ViewModel.DeleteCommand.Execute(menuItem?.CommandParameter);
+            }
+        }
     }
 }

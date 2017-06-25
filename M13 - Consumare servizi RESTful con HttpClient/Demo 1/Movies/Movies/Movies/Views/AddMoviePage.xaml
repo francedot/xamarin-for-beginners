@@ -64,7 +64,7 @@
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
                 <Label Text="Title:" />
-                <Entry Placeholder="Contoso Geeks and where to find them"
+                <Entry Placeholder="Contoso Geeks and Where to Find Them"
                        Text="{Binding Movie.Title, Mode=TwoWay}"
                        Grid.Column="1"/>
             </Grid>
