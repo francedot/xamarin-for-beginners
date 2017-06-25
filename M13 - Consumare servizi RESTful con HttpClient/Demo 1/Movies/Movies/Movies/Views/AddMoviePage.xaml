@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModels="clr-namespace:Movies.ViewModels;assembly=Movies"
+             x:Class="Movies.Views.AddMoviePage"
+             Title="Add Movie">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <OnPlatform x:Key="FieldsSpacing"
+                        x:TypeArguments="x:Double">
+                <On Platform="Android" Value="8"/>
+                <On Platform="iOS" Value="12"/>
+                <On Platform="Windows" Value="12"/>
+            </OnPlatform>
+            <OnPlatform x:Key="EntryMargin"
+                        x:TypeArguments="Thickness">
+                <On Platform="Android" Value="0,-12,0,0"/>
+                <On Platform="iOS" Value="0,0,0,0"/>
+                <On Platform="Windows" Value="0,0,0,0"/>
+            </OnPlatform>
+            <OnPlatform x:Key="TextSize"
+                        x:TypeArguments="x:String">
+                <On Platform="Android" Value="Large"/>
+                <On Platform="iOS" Value="Large"/>
+                <On Platform="Windows" Value="Medium"/>
+            </OnPlatform>
+
+            <Style TargetType="Label">
+                <Setter Property="FontSize" Value="{StaticResource TextSize}"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="VerticalTextAlignment" Value="Center"/>
+            </Style>
+            <Style TargetType="Entry">
+                <Setter Property="FontSize" Value="{StaticResource TextSize}"/>
+                <Setter Property="HorizontalOptions" Value="Fill"/>
+                <Setter Property="PlaceholderColor" Value="CornflowerBlue"/>
+                <Setter Property="Margin" Value="{StaticResource EntryMargin}"/>
+            </Style>
+            <Style TargetType="Editor">
+                <Setter Property="FontSize" Value="{StaticResource TextSize}"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.BindingContext>
+        <viewModels:AddMoviePageViewModel/>
+    </ContentPage.BindingContext>
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Save" Clicked="SaveMovie_OnClicked">
+            <ToolbarItem.Icon>
+                <OnPlatform x:TypeArguments="FileImageSource">
+                    <On Platform="Android" Value="Assets/Save.png"/>
+                    <On Platform="Windows" Value="Assets/Save.png"/>
+                    <On Platform="iOS" Value=""/>
+                </OnPlatform>
+            </ToolbarItem.Icon>
+        </ToolbarItem>
+    </ContentPage.ToolbarItems>
+    <ScrollView>
+        <StackLayout Padding="12"
+                     Spacing="{StaticResource FieldsSpacing}">
+            <Grid ColumnSpacing="8">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Label Text="Title:" />
+                <Entry Placeholder="Contoso Geeks and where to find them"
+                       Text="{Binding Movie.Title, Mode=TwoWay}"
+                       Grid.Column="1"/>
+            </Grid>
+
+            <Grid ColumnSpacing="8">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Label Text="Year:" />
+                <Entry Placeholder="2017"
+                       Grid.Column="1" 
+                       Text="{Binding Movie.Year, Mode=TwoWay}"/>
+            </Grid>
+
+            <Grid ColumnSpacing="8">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Label Text="Director:" />
+                <Entry Placeholder="David Yates"
+                       Grid.Column="1" 
+                       Text="{Binding Movie.Director, Mode=TwoWay}"/>
+            </Grid>
+
+            <Grid ColumnSpacing="8">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Label Text="Country:" />
+                <Entry Placeholder="UK, USA"
+                       Grid.Column="1" 
+                       Text="{Binding Movie.Country, Mode=TwoWay}"/>
+            </Grid>
+
+            <Grid ColumnSpacing="8">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Label Text="Poster:" />
+                <Entry Placeholder="https://images-na.ssl-images-amazon.com/images/M/MV5BMjMxOTM1OTI4MV5BMl5BanBnXkFtZTgwODE5OTYxMDI@._V1_SX300.jpg"
+                       Grid.Column="1"
+                       Text="{Binding Movie.Poster, Mode=TwoWay}"/>
+            </Grid>
+
+            <Grid ColumnSpacing="8">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Label Text="Rating:" />
+                <Entry Placeholder="7.6"
+                       Grid.Column="1"
+                       Text="{Binding Movie.Rating, Mode=TwoWay, StringFormat='{0:0.0}'}"/>
+            </Grid>
+
+            <Grid ColumnSpacing="8">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Label Text="Genre:" />
+                <Entry Placeholder="Adventure, Family, Fantasy"
+                       Grid.Column="1"
+                       Text="{Binding Movie.Genre, Mode=TwoWay}"/>
+            </Grid>
+
+            <Label Text="Plot:" />
+            <Editor HeightRequest="400"
+                    BackgroundColor="LightGray"
+                    Text="{Binding Movie.Plot, Mode=TwoWay}"/>
+
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
