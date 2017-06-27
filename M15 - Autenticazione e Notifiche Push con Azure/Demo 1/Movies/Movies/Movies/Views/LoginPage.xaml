@@ -22,12 +22,19 @@
     <ScrollView>
         <StackLayout Margin="0,0,0,0" Spacing="28">
 
-            <Label FontSize="22"
+            <Label FontSize="56"
+                   Margin="0,16,0,0"
+                   VerticalOptions="Start"
+                   VerticalTextAlignment="Center"
+                   HorizontalTextAlignment="Center"
+                   Text="Movies"
+                   FontAttributes="Bold, Italic"/>
+            
+            <Label FontSize="18"
                    VerticalOptions="EndAndExpand"
                    VerticalTextAlignment="Center"
                    HorizontalTextAlignment="Center"
-                   Text="Login using an Authentication Provider"
-                   FontAttributes="Italic"/>
+                   Text="Login using an Authentication Provider" />
 
             <Grid VerticalOptions="StartAndExpand"
                   HorizontalOptions="Center"
