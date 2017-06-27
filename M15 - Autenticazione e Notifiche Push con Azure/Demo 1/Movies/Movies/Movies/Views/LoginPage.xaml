@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:abstractions="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin.Abstractions"
+             xmlns:viewModels="clr-namespace:Movies.ViewModels;assembly=Movies"
+             x:Class="Movies.Views.LoginPage">
+    <ContentPage.BindingContext>
+        <viewModels:LoginPageViewModel/>
+    </ContentPage.BindingContext>
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="abstractions:CircleImage">
+                <Setter Property="HeightRequest" Value="100"/>
+                <Setter Property="WidthRequest" Value="100"/>
+                <Setter Property="Aspect" Value="AspectFit"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
+                <Setter Property="HorizontalOptions" Value="Center"/> 
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ScrollView>
+        <StackLayout Margin="0,0,0,0" Spacing="28">
+
+            <Label FontSize="22"
+                   VerticalOptions="EndAndExpand"
+                   VerticalTextAlignment="Center"
+                   HorizontalTextAlignment="Center"
+                   Text="Login using an Authentication Provider"
+                   FontAttributes="Italic"/>
+
+            <Grid VerticalOptions="StartAndExpand"
+                  HorizontalOptions="Center"
+                  RowSpacing="16"
+                  ColumnSpacing="24">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="100"/>
+                    <RowDefinition Height="100"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="100"/>
+                    <ColumnDefinition Width="100"/>
+                </Grid.ColumnDefinitions>
+
+                <!-- Microsoft -->
+                <abstractions:CircleImage x:Name="MicrosoftButton"
+                                          ClassId="MicrosoftAccount"
+                                          FillColor="White">
+                    <abstractions:CircleImage.Source>
+                        <OnPlatform x:TypeArguments="ImageSource">
+                            <On Platform="Android" Value="Microsoft.png"/>
+                            <On Platform="iOS" Value="Microsoft.png"/>
+                            <On Platform="Windows" Value="Assets/Microsoft.png"/>
+                        </OnPlatform>
+                    </abstractions:CircleImage.Source>
+                    <abstractions:CircleImage.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_OnTapped" />
+                    </abstractions:CircleImage.GestureRecognizers>
+                </abstractions:CircleImage>
+
+                <!-- Facebook -->
+                <abstractions:CircleImage x:Name="FacebookButton"
+                                          ClassId="Facebook"
+                                          Grid.Row="0"
+                                          Grid.Column="1">
+                    <abstractions:CircleImage.Source>
+                        <OnPlatform x:TypeArguments="ImageSource">
+                            <On Platform="Android" Value="Facebook.png"/>
+                            <On Platform="iOS" Value="Facebook.png"/>
+                            <On Platform="Windows" Value="Assets/Facebook.png"/>
+                        </OnPlatform>
+                    </abstractions:CircleImage.Source>
+                    <abstractions:CircleImage.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_OnTapped" />
+                    </abstractions:CircleImage.GestureRecognizers>
+                </abstractions:CircleImage>
+
+                <!-- Twitter -->
+                <abstractions:CircleImage x:Name="TwitterButton"
+                                          ClassId="Twitter"
+                                          Grid.Row="1"
+                                          Grid.Column="0">
+                    <abstractions:CircleImage.Source>
+                        <OnPlatform x:TypeArguments="ImageSource">
+                            <On Platform="Android" Value="Twitter.jpg"/>
+                            <On Platform="iOS" Value="Twitter.jpg"/>
+                            <On Platform="Windows" Value="Assets/Twitter.jpg"/>
+                        </OnPlatform>
+                    </abstractions:CircleImage.Source>
+                    <abstractions:CircleImage.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_OnTapped" />
+                    </abstractions:CircleImage.GestureRecognizers>
+                </abstractions:CircleImage>
+
+                <!-- Google -->
+                <abstractions:CircleImage x:Name="GoogleButton"
+                                          ClassId="Google"
+                                          Grid.Row="1"
+                                          Grid.Column="1">
+                    <abstractions:CircleImage.Source>
+                        <OnPlatform x:TypeArguments="ImageSource">
+                            <On Platform="Android" Value="Google.png"/>
+                            <On Platform="iOS" Value="Google.png"/>
+                            <On Platform="Windows" Value="Assets/Google.png"/>
+                        </OnPlatform>
+                    </abstractions:CircleImage.Source>
+                    <abstractions:CircleImage.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_OnTapped" />
+                    </abstractions:CircleImage.GestureRecognizers>
+                </abstractions:CircleImage>
+            </Grid>
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>

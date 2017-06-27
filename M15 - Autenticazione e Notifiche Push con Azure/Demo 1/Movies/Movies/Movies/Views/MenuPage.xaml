@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Movies.Views.MenuPage">
+    <ListView ItemsSource="{Binding Genres}"
+              SelectedItem="{Binding SelectedGenre, Mode=TwoWay}"
+              RowHeight="50"
+              Footer="{Binding .}">
+        <ListView.FooterTemplate>
+            <DataTemplate>
+                <StackLayout Orientation="Horizontal"
+                             Padding="14,10"
+                             Spacing="8"
+                             BackgroundColor="LightGray">
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding LogoutCommand}"/>
+                    </StackLayout.GestureRecognizers>
+                    <Image HeightRequest="40"
+                           Aspect="AspectFit">
+                        <Image.Source>
+                            <OnPlatform x:TypeArguments="ImageSource">
+                                <On Platform="Android" Value="Logout.png"/>
+                                <On Platform="iOS" Value="Logout.png"/>
+                                <On Platform="Windows" Value="Assets/Logout.png"/>
+                            </OnPlatform>
+                        </Image.Source>
+                    </Image>
+                    <Label Style="{StaticResource MainMenuLabelStyle}"
+                           Text="Logout" />
+                </StackLayout>
+            </DataTemplate>
+        </ListView.FooterTemplate>
+        <ListView.Margin>
+            <OnPlatform x:TypeArguments="Thickness">
+                <On Platform="iOS" Value="0,20,0,0"/>
+            </OnPlatform>
+      </ListView.Margin>
+      <ListView.ItemTemplate>
+          <DataTemplate>
+              <ViewCell>
+                    <StackLayout Orientation="Horizontal" Padding="24,0,0,0">
+                        <Label Style="{StaticResource MainMenuLabelStyle}" Text="{Binding .}" />
+                    </StackLayout>
+                </ViewCell>
+            </DataTemplate>
+      </ListView.ItemTemplate>
+  </ListView>
+</ContentPage>
