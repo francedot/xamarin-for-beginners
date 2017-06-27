@@ -1,3 +1,6 @@
 [submodule "XamCognitiveFace"]
 	path = M13 - Consumare servizi RESTful con HttpClient/Demo 2/XamCognitiveFace
 	url = https://github.com/francedot/XamCognitiveFace.git
+[submodule "Movies"]
+	path = M15 - Autenticazione e Notifiche Push con Azure/Demo 2/Movies
+	url = https://github.com/francedot/Movies.git
